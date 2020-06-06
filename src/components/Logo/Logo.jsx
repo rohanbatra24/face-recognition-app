@@ -9,7 +9,7 @@ import './Logo.css';
 const Logo = () => {
 	return (
 		<div className="ma4 mt0">
-			<Tilt className=" br2 shadow-2  Tilt" options={{ max: 55 }} style={{ height: 150, width: 150 }}>
+			<Tilt className=" br2 shadow-2  Tilt" options={{ max: 85 }} style={{ height: 150, width: 150 }}>
 				<div className="Tilt-inner pa3">
 					<img src={logo} alt="" style={{ paddingTop: '5px' }} />
 				</div>
