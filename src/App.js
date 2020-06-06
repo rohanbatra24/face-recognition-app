@@ -3,6 +3,7 @@ import './App.css';
 import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
+import SignIn from './components/SignIn/SignIn';
 import Rank from './components/Rank/Rank';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Particles from 'react-particles-js';
@@ -72,6 +73,7 @@ class App extends Component {
 			<div className="App">
 				<Particles className="particles" params={particlesOptions} />
 				<Navigation />
+				<SignIn />
 				<Logo />
 				<Rank />
 				<ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
