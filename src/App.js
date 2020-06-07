@@ -6,7 +6,7 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import SignIn from './components/SignIn/SignIn';
 import Rank from './components/Rank/Rank';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
-import Particles from 'react-particles-js';
+import Particles, { HoverMode } from 'react-particles-js';
 
 const Clarifai = require('clarifai');
 
@@ -32,7 +32,8 @@ class App extends Component {
 		this.state = {
 			input    : '',
 			imageUrl : '',
-			box      : {}
+			box      : {},
+			route    : 'signin'
 		};
 	}
 
@@ -68,16 +69,25 @@ class App extends Component {
 			.catch((err) => console.log(err));
 	};
 
+	onRouteChange = (route) => {
+		this.setState({ route });
+	};
+
 	render() {
 		return (
 			<div className="App">
 				<Particles className="particles" params={particlesOptions} />
-				<Navigation />
-				<SignIn />
-				<Logo />
-				<Rank />
-				<ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
-				<FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} />
+				<Navigation onRouteChange={this.onRouteChange} />
+				{this.state.route === 'signin' ? (
+					<SignIn onRouteChange={this.onRouteChange} />
+				) : (
+					<div>
+						<Logo />
+						<Rank />
+						<ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
+						<FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} />
+					</div>
+				)}
 			</div>
 		);
 	}
