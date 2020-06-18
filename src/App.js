@@ -4,6 +4,7 @@ import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import SignIn from './components/SignIn/SignIn';
+import Register from './components/Register/Register';
 import Rank from './components/Rank/Rank';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Particles, { HoverMode } from 'react-particles-js';
@@ -30,10 +31,11 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			input    : '',
-			imageUrl : '',
-			box      : {},
-			route    : 'signin'
+			input      : '',
+			imageUrl   : '',
+			box        : {},
+			route      : 'signin',
+			isSignedIn : false
 		};
 	}
 
@@ -70,6 +72,13 @@ class App extends Component {
 	};
 
 	onRouteChange = (route) => {
+		if (route === 'signout') {
+			this.setState({ isSignedIn: false });
+		}
+		else if (route === 'home') {
+			this.setState({ isSignedIn: true });
+		}
+
 		this.setState({ route });
 	};
 
@@ -77,16 +86,19 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Particles className="particles" params={particlesOptions} />
-				<Navigation onRouteChange={this.onRouteChange} />
-				{this.state.route === 'signin' ? (
-					<SignIn onRouteChange={this.onRouteChange} />
-				) : (
+				<Navigation isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange} />
+
+				{this.state.route === 'home' ? (
 					<div>
 						<Logo />
 						<Rank />
 						<ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
 						<FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} />
 					</div>
+				) : this.state.route === 'signin' ? (
+					<SignIn onRouteChange={this.onRouteChange} />
+				) : (
+					<Register onRouteChange={this.onRouteChange} />
 				)}
 			</div>
 		);
