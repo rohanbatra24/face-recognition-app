@@ -7,7 +7,7 @@ import SignIn from './components/SignIn/SignIn';
 import Register from './components/Register/Register';
 import Rank from './components/Rank/Rank';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
-import Particles, { HoverMode } from 'react-particles-js';
+import Particles from 'react-particles-js';
 
 const Clarifai = require('clarifai');
 
