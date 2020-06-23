@@ -12,7 +12,7 @@ import Particles from 'react-particles-js';
 const Clarifai = require('clarifai');
 
 const app = new Clarifai.App({
-	apiKey : 'f84bba4ed61d47ce8ff66f3e22bf02b5'
+	apiKey : '59c15ce763474c6d8f4e300779a973fc'
 });
 
 const particlesOptions = {
@@ -83,9 +83,11 @@ class App extends Component {
 
 	onButtonSubmit = (event) => {
 		this.setState({ imageUrl: this.state.input });
+		console.log('onsubmit');
 		app.models
-			.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
+			.predict('c0c0ac362b03416da06ab3fa36fb58e3', this.state.input)
 			.then((response) => {
+				console.log('response', response);
 				if (response) {
 					fetch('http://localhost:3001/image', {
 						method  : 'put',
