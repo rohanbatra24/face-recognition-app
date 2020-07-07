@@ -85,7 +85,7 @@ class App extends Component {
 		this.setState({ imageUrl: this.state.input });
 		console.log('onsubmit');
 		app.models
-			.predict('c0c0ac362b03416da06ab3fa36fb58e3', this.state.input)
+			.predict('a403429f2ddf4b49b307e318f00e528b', this.state.input)
 			.then((response) => {
 				console.log('response', response);
 				if (response) {
