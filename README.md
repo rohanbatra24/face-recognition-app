@@ -16,9 +16,6 @@ Features include authentication (user login/registration) and keeping track of i
 !["Register"](https://github.com/rohanbatra24/face-recognition-app/blob/master/assets/screenshots/Screen%20Shot%202020-07-07%20at%207.39.12%20PM.png?raw=true)
 
 ------------------------------------
-![""]()
-
-------------------------------------
 ![""](https://github.com/rohanbatra24/face-recognition-app/blob/master/assets/screenshots/Screen%20Shot%202020-07-07%20at%207.40.23%20PM.png?raw=true)
 
 ------------------------------------
