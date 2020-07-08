@@ -33,6 +33,7 @@ Features include authentication (user login/registration) and keeping track of i
 - PostgreSQL
 - Knex
 - BCrypt
+- API (https://www.clarifai.com/)
 
 
 
