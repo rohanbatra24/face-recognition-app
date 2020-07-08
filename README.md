@@ -7,22 +7,22 @@ Features include authentication (user login/registration) and keeping track of i
 ## Final Product
 
 ------------------------------------
-!["Home Page"]()
+!["Home Page"](https://github.com/rohanbatra24/face-recognition-app/blob/master/assets/screenshots/Screen%20Shot%202020-07-07%20at%207.37.40%20PM.png?raw=true)
+
+------------------------------------
+![""](https://github.com/rohanbatra24/face-recognition-app/blob/master/assets/screenshots/Screen%20Shot%202020-07-07%20at%207.36.47%20PM.png?raw=true)
+
+------------------------------------
+!["Register"](https://github.com/rohanbatra24/face-recognition-app/blob/master/assets/screenshots/Screen%20Shot%202020-07-07%20at%207.39.12%20PM.png?raw=true)
 
 ------------------------------------
 ![""]()
 
 ------------------------------------
-![""]()
+![""](https://github.com/rohanbatra24/face-recognition-app/blob/master/assets/screenshots/Screen%20Shot%202020-07-07%20at%207.40.23%20PM.png?raw=true)
 
 ------------------------------------
-!["Register"]()
-
-------------------------------------
-![""]()
-
-------------------------------------
-![""]()
+![""](https://github.com/rohanbatra24/face-recognition-app/blob/master/assets/screenshots/Screen%20Shot%202020-07-07%20at%207.40.42%20PM.png?raw=true)
 
 ## Tools
 
