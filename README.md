@@ -1,6 +1,6 @@
 # Online Store
 
-An app that can detect human faces in pictures and dynamically display a bounding box around each face. Built with with ReactJS, Javascript, Tachyons, React-Tilt, Particles.js on the front-end and a seperate back-end API server built with NodeJS, Express, Knex & PostgreSQL. The app also uses an external API service (Clarifai) for the computer vision/AI feature. The 
+An app that can detect human faces in pictures and dynamically display a bounding box around each face. Built with ReactJS, Javascript, Tachyons, React-Tilt, Particles.js on the front-end and a back-end API server built with NodeJS, Express, Knex & PostgreSQL. The app also uses an external API service (Clarifai) for the computer vision/AI feature. 
 
 Features include authentication (user login/registration) and keeping track of image submissions by users. 
 
